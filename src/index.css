@@ -1,0 +1,165 @@
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    text-shadow: 0 0 10px rgba(99, 102, 241, 0.4);
+  }
+  50% {
+    text-shadow: 0 0 30px rgba(139, 92, 246, 0.8);
+  }
+  100% {
+    text-shadow: 0 0 10px rgba(99, 102, 241, 0.4);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(-20px) scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 0.8;
+  }
+}
+
+.animate-gradientMove {
+  animation: gradientMove 7s ease infinite;
+  background-size: 300% 300%;
+}
+
+.animate-shimmer {
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+.animate-shimmer-delay {
+  animation: shimmer 3s ease-in-out infinite 1.5s;
+}
+
+.animate-float {
+  animation: float infinite;
+}
+
+
+@layer base {
+  :root {
+    --background: 0 10% 4%;
+    --foreground: 0 0% 96%;
+
+    --card: 0 15% 7%;
+    --card-foreground: 0 0% 96%;
+
+    --popover: 0 15% 7%;
+    --popover-foreground: 0 0% 96%;
+
+    --primary: 0 90% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 50% 15%;
+    --secondary-foreground: 0 0% 96%;
+
+    --muted: 0 15% 12%;
+    --muted-foreground: 0 10% 65%;
+
+    --accent: 0 55% 20%;
+    --accent-foreground: 0 0% 96%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 20% 15%;
+    --input: 0 20% 15%;
+    --ring: 0 90% 55%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 12% 5%;
+    --sidebar-foreground: 0 0% 88%;
+    --sidebar-primary: 0 90% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 50% 15%;
+    --sidebar-accent-foreground: 0 0% 96%;
+    --sidebar-border: 0 20% 15%;
+    --sidebar-ring: 0 90% 55%;
+
+    /* Custom brand tokens */
+    --brand-red: 0 90% 55%;
+    --brand-crimson: 0 75% 20%;
+    --brand-dark: 0 15% 4%;
+    --brand-glow: 0 100% 60%;
+    --brand-pink: 0 75% 78%;
+    --brand-soft: 0 35% 90%;
+
+    /* Gradient stops */
+    --gradient-hero-from: 0 90% 55%;
+    --gradient-hero-via: 0 65% 14%;
+    --gradient-hero-to: 0 10% 4%;
+
+    /* Glass tokens */
+    --glass-bg: 0 30% 100%;
+    --glass-border: 0 30% 100%;
+
+    /* Light section tokens */
+    --light-bg: 0 0% 100%;
+    --light-bg-subtle: 0 20% 97%;
+    --light-fg: 0 15% 10%;
+    --light-fg-muted: 0 10% 40%;
+    --light-fg-subtle: 0 8% 55%;
+    --light-border: 0 10% 90%;
+    --light-card: 0 0% 100%;
+    --light-card-border: 0 10% 92%;
+    --light-accent-bg: 0 85% 97%;
+    --light-accent-border: 0 70% 85%;
+  }
+
+  .dark {
+    --background: 0 10% 4%;
+    --foreground: 0 0% 96%;
+    --card: 0 15% 7%;
+    --card-foreground: 0 0% 96%;
+    --popover: 0 15% 7%;
+    --popover-foreground: 0 0% 96%;
+    --primary: 0 90% 55%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 50% 15%;
+    --secondary-foreground: 0 0% 96%;
+    --muted: 0 15% 12%;
+    --muted-foreground: 0 10% 65%;
+    --accent: 0 55% 20%;
+    --accent-foreground: 0 0% 96%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 20% 15%;
+    --input: 0 20% 15%;
+    --ring: 0 90% 55%;
+    --sidebar-background: 0 12% 5%;
+    --sidebar-foreground: 0 0% 88%;
+    --sidebar-primary: 0 90% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 50% 15%;
+    --sidebar-accent-foreground: 0 0% 96%;
+    --sidebar-border: 0 20% 15%;
+    --sidebar-ring: 0 90% 55%;
+  }
+  
+}
+
+
