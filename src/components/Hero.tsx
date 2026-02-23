@@ -1,6 +1,6 @@
 import React, { useMemo } from "react";
 import { motion } from "framer-motion";
-import heroVisual from "../assets/redImage1.png";
+import heroVisual from "../assets/redimage1.png";
 
 const dk = {
   bg: "hsl(0 10% 4%)",
